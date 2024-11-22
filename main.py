@@ -16,9 +16,9 @@ import json
 # use a .env file brevski
 from dotenv import load_dotenv
 
-load_dot_env
+load_dotenv()
 
-genai.configure(api_key="GOOGLE_API_KEY")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Function to transform text into brainrot
 def transform_to_brainrot(input_text):
