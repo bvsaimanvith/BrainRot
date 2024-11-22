@@ -16,7 +16,7 @@ import json
 # use a .env file brevski
 from dotenv import load_dotenv
 
-load_dot_env
+load_dot_env()
 
 genai.configure(api_key="GOOGLE_API_KEY")
 
