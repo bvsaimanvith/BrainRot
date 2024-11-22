@@ -3,16 +3,22 @@ import google.generativeai as genai
 import os
 import json
 
-# working directory path
-working_dir = os.path.dirname(os.path.abspath(__file__))
+# # working directory path
+# working_dir = os.path.dirname(os.path.abspath(__file__))
 
-# path of config_data file
-config_file_path = f"{working_dir}/config.json"
-config_data = json.load(open("config.json"))
+# # path of config_data file
+# config_file_path = f"{working_dir}/config.json"
+# config_data = json.load(open("config.json"))
 
-# loading the GOOGLE_API_KEY
-API_KEY = config_data["GOOGLE_API_KEY"]
-genai.configure(api_key=API_KEY)
+# # loading the GOOGLE_API_KEY
+# API_KEY = config_data["GOOGLE_API_KEY"]
+
+# use a .env file brevski
+from dotenv import load_dotenv
+
+load_dot_env
+
+genai.configure(api_key="GOOGLE_API_KEY")
 
 # Function to transform text into brainrot
 def transform_to_brainrot(input_text):
